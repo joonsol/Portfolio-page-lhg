@@ -1,29 +1,38 @@
-@use '../../../styles/themes' as *;
+@use "../../../styles/themes" as *;
 
+.inner.Mprojects-inner {
+  max-width: 160rem;
+  background-color: var(--color-bg-muted);
+  transition: $transition-theme;
+  padding: $space-12 0;
 
-    
-    
+  .tits-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6.4rem;
 
-    .inner.Mprojects-inner {
-        max-width: 160rem;
-        background-color: var(--color-bg-muted);
-        transition: $transition-theme;
-        padding: $space-12 0;
-        
-        .Main-grid {
-            
-            display: flex;
-            flex-direction: column;
-            gap: $space-5;
-            margin-top: $space-3;
-            grid-template-columns: 1fr;
-            @media (min-width:768px){
-                grid-template-columns: repeat(2,1fr);
-                
-            }
-            @media (min-width:1024px){
-                grid-template-columns: repeat(3,1fr);
-                
-            }
-        }
+    .tit__ {
+      font-size: 7.5rem;
     }
+
+    .txt__ {
+      color: var(--gray-500);
+      font-size: 1.6rem;
+    }
+  }
+
+  .Main-grid {
+    display: flex;
+    flex-direction: column;
+    gap: $space-5;
+    margin-top: $space-3;
+    grid-template-columns: 1fr;
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

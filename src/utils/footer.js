@@ -1,9 +1,9 @@
 // src/data/footer.data.js
 const footer = {
   brand: {
-    name: "LOGO",
-    logo: "/img/logo.svg", // public/img/logo.svg 기준
-    copy: `© ${new Date().getFullYear()} DECODE.Lab. All rights reserved.`,
+    name: "IHG",
+    logo: "", // public/img/logo.svg 기준
+    copy: `© ${new Date().getFullYear()} Portfolio.Im Hyeongyun. All rights reserved.`,
   },
   links: [
     {

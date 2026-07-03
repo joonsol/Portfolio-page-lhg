@@ -179,23 +179,25 @@
                 background-size: contain;
             }
         }
-
-        p.txt {
-            position: absolute;
-            text-align: right;
-            right: 2rem;
-            bottom: 10rem;
-
-            @media screen and (max-width:599px) {
-                font-size: 1.6rem;
-                // width:50%;
-            }
-
-            @media screen and (max-width:399px) {
-                display: none;
-            }
-        }
+      }
     }
+
+    p.txt {
+      position: absolute;
+      text-align: right;
+      right: 2rem;
+      bottom: 10rem;
+
+      @media screen and (max-width: 599px) {
+        font-size: 1.6rem;
+        // width:50%;
+      }
+
+      @media screen and (max-width: 399px) {
+        display: none;
+      }
+    }
+  }
 
     .intro-btn {
         display: flex;
@@ -220,11 +222,19 @@
             }
         }
     }
+  }
 
-    .intro-btn {
-        display: flex;
-        gap: 15px;
-        margin-top: $space-5;
+  .intro-btn {
+    display: flex;
+    gap: 15px;
+    margin-top: $space-5;
+
+    .myworkBtn {
+      background: var(--btn-primary-bg);
+      color: #fff;
+      padding: $space-3 $space-4;
+      border-radius: $radius-sm;
+    }
 
         .myworkBtn {
             background: var(--btn-primary-bg);
@@ -241,5 +251,5 @@
             padding: $space-1 $space-4;
         }
     }
-  
+  }
 }

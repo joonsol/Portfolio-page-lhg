@@ -1,52 +1,82 @@
-@use '../../../styles/themes' as *;
+@use "../../../styles/themes" as *;
 
-    #MiniProject {
-        background: var(--color-bg);
+#MiniProject {
+  background: var(--color-bg);
+}
+
+.inner.projects-inner {
+  max-width: $breakpoint-xl;
+  background: var(--color-bg);
+  transition: $transition-theme;
+  padding: $space-12 0;
+
+  .tits-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6.4rem;
+
+    .tit__ {
+      font-size: 7.5rem;
     }
-    
-    
 
-    .inner.projects-inner {
-        max-width: 160rem;
-        background: var(--color-bg);
-        transition: $transition-theme;
-        padding: $space-12 0;
-        
-        .grid {
-            display: grid;
-            gap: $space-5;
-            margin-top: $space-3;
-            grid-template-columns: 1fr;
+    .txt__ {
+      color: var(--gray-500);
+      font-size: 1.6rem;
+    }
+  }
 
-            .mini-card {
-                .mini-body {
+  .grid {
+    display: grid;
+    gap: $space-5;
+    margin-top: $space-3;
+    grid-template-columns: 1fr;
 
-                    .mini-tags {
-                        font-size: $font-size-sm;
-                    }
+    @media screen and (max-width: $breakpoint-lg) {
+      grid-template-columns: repeat(3, 1fr);
+    }
 
-                    .mini-card-tit {
-                        font-size: $font-size-xl;
-                    }
-                    .desc {
-                        font-size: $font-size-md;
-                        color: var(--gray-600);
-                    }
-
-                    .mini-styles {
-                        display: flex;
-                        gap: $space-2;
-                    }
-                }
-            }
-
-            @media (min-width:768px){
-                grid-template-columns: repeat(2,1fr);
-                
-            }
-            @media (min-width:1024px){
-                grid-template-columns: repeat(3,1fr);
-                
-            }
+    .mini-card {
+      .mini-body {
+        .mini-tags {
+          font-size: $font-size-sm;
         }
+
+        .mini-card-tit {
+          font-size: $font-size-xl;
+        }
+        .desc {
+          font-size: $font-size-md;
+          color: var(--gray-600);
+        }
+
+        .mini-styles {
+          display: flex;
+          gap: $space-2;
+
+          .view-btn {
+            font-size: $font-size-sm;
+            color: var(--btn-primary-text);
+            border-radius: 1rem;
+            background-color: var(--btn-primary-bg);
+            padding: $space-2 $space-3;
+          }
+
+          .code-btn {
+            font-size: $font-size-sm;
+            padding: $space-2 $space-3;
+            border-radius: 1rem;
+            border: 1px solid var(--color-border);
+          }
+        }
+      }
     }
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
