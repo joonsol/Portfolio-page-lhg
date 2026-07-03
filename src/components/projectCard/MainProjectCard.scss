@@ -1,62 +1,81 @@
-
-@use '../../styles/themes' as *;
+@use "../../styles/themes" as *;
 .main-card {
-    width: 1440px;
-    height: 420px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    overflow: hidden;
-    border: 1px solid var(--color-border);
-    background-color: var(--color-card-bg);
-    box-shadow: var(--shadow-sm);
-    transition: $transition-theme;
+  width: 1440px;
+  height: 420px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-card-bg);
+  box-shadow: var(--shadow-sm);
+  transition: $transition-theme;
+  border-radius: $radius-md;
+  padding: 3rem;
+  .main-thumb {
+    width: 540px;
+    height: 360px;
     border-radius: $radius-md;
-    padding: 3rem;
-    .main-thumb{
-        width: 540px;
-        height: 360px;
-        border-radius: $radius-md;
-        overflow: hidden;
-        background: linear-gradient(
-            135deg,
-            var(--color-bg-muted),
-            var(--color-border)
-        );
+    overflow: hidden;
+    background: linear-gradient(
+      135deg,
+      var(--color-bg-muted),
+      var(--color-border)
+    );
+  }
+  .main-body {
+    width: 680px;
 
-        
-        
-        
-    
+    display: flex;
+    flex-direction: column;
+    gap: $space-1;
+    padding: $space-3;
+
+    .main-card-tit {
+      font-size: $font-size-4xl;
+      font-weight: 700;
     }
-    .main-body {
-        width: 680px;
-        
-        display: flex;
-        flex-direction: column;
-        gap:$space-1;
-        padding:$space-3;
-
-        .main-card-tit {
-            font-size: $font-size-4xl;
-            font-weight: 700;
-        }
-        .main-tags {
-            display: flex;
-            gap: $space-1;
-            flex-wrap: wrap;             
-        }
-        .main-desc {
-            font-size: $font-size-2xl;
-            color:var(--color-text-muted);
-            min-height: 5rem;
-        }
-        .main-cta {
-            gap: $space-1;
-            display: flex;
-            margin-top: $space-1;
-        }
-
-        
+    .main-tags {
+      display: flex;
+      gap: $space-1;
+      flex-wrap: wrap;
     }
+    .main-desc {
+      font-size: $font-size-2xl;
+      color: var(--color-text-muted);
+      min-height: 5rem;
+    }
+    .main-cta {
+      gap: $space-1;
+      display: flex;
+      margin-top: $space-1;
+    }
+
+    .main-styles {
+      display: flex;
+      gap: $space-2;
+    }
+
+    .view-btn {
+      font-size: $font-size-sm;
+      color: var(--btn-primary-text);
+      border-radius: 1rem;
+      background-color: var(--btn-primary-bg);
+      padding: $space-2 $space-3;
+    }
+
+    .code-btn {
+      font-size: $font-size-sm;
+      padding: $space-2 $space-3;
+      border-radius: 1rem;
+      border: 1px solid var(--color-border);
+    }
+
+    .notion-btn {
+      background-color: var(--color-bg);
+      border-radius: 1rem;
+      border: 1px solid var(--color-border);
+      padding: $space-2 $space-3;
+    }
+  }
 }

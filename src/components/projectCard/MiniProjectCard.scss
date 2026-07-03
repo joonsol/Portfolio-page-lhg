@@ -1,52 +1,51 @@
-
-@use '../../styles/themes' as *;
+@use "../../styles/themes" as *;
 .mini-card {
-    // width: 450px;
-    height: 400px;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    border: 1px solid var(--color-border);
-    background-color: var(--color-card-bg);
-    box-shadow: var(--shadow-sm);
-    transition: $transition-theme;
-    border-radius: $radius-md;
-    padding: 2rem;
-    .mini-thumb{
-        aspect-ratio: 16 / 10;
-        width: 100%;
-        overflow: hidden;
-        border-radius: $radius-md;
-        background: linear-gradient(
-            135deg,
-            var(--color-bg-muted),
-            var(--color-border)
-        );
+  // width: 450px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-card-bg);
+  box-shadow: var(--shadow-sm);
+  transition: $transition-theme;
+  border-radius: $radius-md;
+  padding: 2rem;
+  .mini-thumb {
+    aspect-ratio: 16 / 10;
+    width: 456px;
 
-        
-    
+    overflow: hidden;
+    // border-radius: $radius-md;
+    background-image: url("../../utils/miniprojectList.js");
+    background-size: cover;
+    // background: linear-gradient(
+    //   135deg,
+    //   var(--color-bg-muted),
+    //   var(--color-border)
+    // );
+  }
+  .mini-body {
+    display: flex;
+    flex: 1;
+    margin-top: $space-4;
+    flex-direction: column;
+    gap: $space-3;
+    padding: $space-3;
+    .mini-tags {
+      display: flex;
+      gap: $space-1;
+      flex-wrap: wrap;
     }
-    .mini-body {
-        display: flex;
-        flex: 1;
-        margin-top: $space-4;
-        flex-direction: column;
-        gap:$space-1;
-        padding:$space-3;
-        .mini-tags {
-            display: flex;
-            gap: $space-1;
-            flex-wrap: wrap;             
-        }
-        .mini-desc {
-            font-size: $font-size-sm;
-            color:var(--color-text-muted);
-            min-height: 5rem;
-        }
-        .mini-cta {
-            gap: $space-1;
-            display: flex;
-            margin-top: $space-1;
-        }
+    .mini-desc {
+      font-size: $font-size-sm;
+      color: var(--color-text-muted);
+      min-height: 5rem;
     }
+    .mini-cta {
+      gap: $space-1;
+      display: flex;
+      margin-top: $space-1;
+    }
+  }
 }
